@@ -1,10 +1,12 @@
-# Archiving and Compressing
+# Bash Terminal
 
-## To tar and gzip
+## Archiving and Compressing
+
+### To tar and gzip
 
 tar -czvf archive.tar.gz /usr/local/something
 
-## To extract and gunzip
+### To extract and gunzip
 
 tar -xzvf archive.tar.gz
 
