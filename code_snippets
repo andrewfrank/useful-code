@@ -1,12 +1,24 @@
 # Bash Terminal
-
 ## Archiving and Compressing
-
-### To tar and gzip
-
+### tar and gzip oneliner
 tar -czvf archive.tar.gz /usr/local/something
 
-### To extract and gunzip
-
+### extract tar and gunzip oneliner
 tar -xzvf archive.tar.gz
 
+## Uploading to remote
+scp /usr/local/something afrank@xanadu-submit-int.cam.uchc.edu:/home/CAM/afrank
+
+# Xanadu cluster
+## Running jobs
+
+sbatch script.sh
+
+## Checking job status
+
+squeue
+squeue -u afrank
+
+## Create interactive bash session
+
+srun --pty bash
