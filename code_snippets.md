@@ -25,12 +25,23 @@ sbatch script.sh
 ```
 
 ## Checking job status
+All jobs
 ```
 squeue
 ```
+My jobs
 ```
 squeue -u afrank
 ```
+Jobs running on a partition
+```
+squeue -p general
+```
+Cancel job
+```
+scancel
+```
+
 ## Create interactive bash session
 ```
 srun --pty bash
