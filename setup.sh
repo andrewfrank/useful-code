@@ -55,6 +55,7 @@ python -m pip install --user --upgrade pip
 # set up vscode packages
 code --install-extension timonwong.shellcheck
 code --install-extension ms-python.python
+code --install-extension donjayamanne.githistory
 code --install-extension eamodio.gitlens
 code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension yzhang.markdown-all-in-one
