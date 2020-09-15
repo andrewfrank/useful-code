@@ -49,6 +49,9 @@ source ~/.bash_profile
 # bootstrap existing pip to the latest version of pip
 python -m pip install --user --upgrade pip
 
+# set up python packages
+python -m pip install grip
+
 # requires running the following in the command palette for VS Code command line
 # `>Shell Command: Install 'code' command in PATH` in VS Code
 
