@@ -62,3 +62,4 @@ code --install-extension donjayamanne.githistory
 code --install-extension eamodio.gitlens
 code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension yzhang.markdown-all-in-one
+code --install-extension ban.spellright
