@@ -27,8 +27,13 @@ brew install pylint
 brew install r
 
 # install IDEs
+brew cask install google-cloud-sdk
 brew cask install visual-studio-code
 brew cask install rstudio
+
+# configure google-cloud-sdk
+echo -e 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"\nsource "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"' >> ~/.bash_profile
+source ~/.bash_profile
 
 # install bioinformatics packages
 brew install brewsci/bio/FORMULA
