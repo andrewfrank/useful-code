@@ -6,6 +6,11 @@
 # a running list of packages and tools essential for bioinformatics development
 # (with a strong bent toward microbiology) with references
 
+# make ~/bin directory + add to path
+mkdir ~/bin
+echo -e 'export PATH="~/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
+
 # install homebrew
 # https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -17,7 +22,8 @@ brew install sqlite3
 brew install xz
 brew install zlib
 
-# install developer packages
+# install some useful tools
+brew install docker
 brew install git
 brew install shellcheck
 brew install pigz
@@ -26,7 +32,8 @@ brew install pyenv-virtualenv
 brew install pylint
 brew install r
 
-# install IDEs
+# install apps
+brew cask install docker
 brew cask install google-cloud-sdk
 brew cask install visual-studio-code
 brew cask install rstudio
@@ -39,6 +46,14 @@ source ~/.bash_profile
 brew install brewsci/bio/FORMULA
 brew install fastqc
 brew install spades
+
+# install java
+brew tap adoptopenjdk/openjdk
+brew cask install adoptopenjdk8
+
+# install nextflow
+curl -fsSL get.nextflow.io | bash
+mv ./nextflow ~/bin/nextflow
 
 # configure python using pyenv + pyenv-virtualenv
 # https://stackoverflow.com/questions/41573587 for virtues of pyenv/virtualenv
@@ -68,3 +83,4 @@ code --install-extension eamodio.gitlens
 code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension yzhang.markdown-all-in-one
 code --install-extension ban.spellright
+code --install-extension ms-azuretools.vscode-docker
