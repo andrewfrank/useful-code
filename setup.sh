@@ -11,6 +11,9 @@ mkdir ~/bin
 echo -e 'export PATH="~/bin:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 
+# install xcode
+xcode-select --install
+
 # install homebrew
 # https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -21,9 +24,14 @@ brew install readline
 brew install sqlite3
 brew install xz
 brew install zlib
+brew install zsh
+
+# make zsh the default shell
+echo -e /usr/local/bin/zsh >> /etc/shells
 
 # install some useful tools
 brew install docker
+brew install graphviz
 brew install git
 brew install shellcheck
 brew install pigz
@@ -40,6 +48,8 @@ brew cask install rstudio
 
 # configure google-cloud-sdk
 echo -e 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"\nsource "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"' >> ~/.bash_profile
+echo -e 'export NXF_VER=20.01.0\nexport NXF_MODE=google' >> ~/.bash_profile
+echo -e 'export GOOGLE_APPLICATION_CREDENTIALS=~/nextflow-test-294518-a2483fcc3d06.json'  >> ~/.bash_profile
 source ~/.bash_profile
 
 # install bioinformatics packages
