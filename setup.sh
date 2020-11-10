@@ -6,11 +6,6 @@
 # a running list of packages and tools essential for bioinformatics development
 # (with a strong bent toward microbiology) with references
 
-# make ~/bin directory + add to path
-mkdir ~/bin
-echo -e 'export PATH="~/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
-
 # install xcode
 xcode-select --install
 
@@ -24,10 +19,6 @@ brew install readline
 brew install sqlite3
 brew install xz
 brew install zlib
-brew install zsh
-
-# make zsh the default shell
-echo -e /usr/local/bin/zsh >> /etc/shells
 
 # install some useful tools
 brew install docker
@@ -60,6 +51,11 @@ brew install spades
 # install java
 brew tap adoptopenjdk/openjdk
 brew cask install adoptopenjdk8
+
+# make ~/bin directory + add to path
+mkdir ~/bin
+echo -e 'export PATH="~/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
 
 # install nextflow
 curl -fsSL get.nextflow.io | bash
