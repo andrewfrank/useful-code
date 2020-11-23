@@ -33,14 +33,16 @@ brew install r
 
 # install apps
 brew cask install docker
+brew cask install gitter
 brew cask install google-cloud-sdk
 brew cask install visual-studio-code
 brew cask install rstudio
+brew cask install slack
+brew cask install transmit
 
 # configure google-cloud-sdk
 echo -e 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"\nsource "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"' >> ~/.bash_profile
-echo -e 'export NXF_VER=20.01.0\nexport NXF_MODE=google' >> ~/.bash_profile
-echo -e 'export GOOGLE_APPLICATION_CREDENTIALS=~/nextflow-test-294518-a2483fcc3d06.json'  >> ~/.bash_profile
+echo -e 'export GOOGLE_APPLICATION_CREDENTIALS=~/western-arch-294518-4d8067e76648.json'  >> ~/.bash_profile
 source ~/.bash_profile
 
 # install bioinformatics packages
@@ -60,6 +62,9 @@ source ~/.bash_profile
 # install nextflow
 curl -fsSL get.nextflow.io | bash
 mv ./nextflow ~/bin/nextflow
+echo -e 'export NXF_VER=20.10.0' >> ~/.bash_profile
+echo -e 'export NXF_MODE=google' >> ~/.bash_profile
+echo -e 'export TOWER_ACCESS_TOKEN=<insert token here>' >> ~/.bash_profile
 
 # configure python using pyenv + pyenv-virtualenv
 # https://stackoverflow.com/questions/41573587 for virtues of pyenv/virtualenv
@@ -90,3 +95,4 @@ code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension yzhang.markdown-all-in-one
 code --install-extension ban.spellright
 code --install-extension ms-azuretools.vscode-docker
+code --install-extension cssho.vscode-svgviewer
