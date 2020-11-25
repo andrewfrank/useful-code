@@ -33,11 +33,10 @@ brew install r
 
 # install apps
 brew cask install docker
-brew cask install gitter
+brew cask install ferdi
 brew cask install google-cloud-sdk
 brew cask install visual-studio-code
 brew cask install rstudio
-brew cask install slack
 brew cask install transmit
 
 # configure google-cloud-sdk
