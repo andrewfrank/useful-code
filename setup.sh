@@ -103,7 +103,7 @@ brew cask install rstudio
 brew cask install transmit
 
 # install convenience apps
-brew cask install ferdi
+brew cask install ferdi #https://github.com/getferdi/ferdi
 brew cask install michaelvillar-timer #https://github.com/michaelvillar/timer-app
 
 # configure python using pyenv + pyenv-virtualenv
