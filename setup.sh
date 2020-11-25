@@ -121,7 +121,11 @@ source ~/.bash_profile
 python -m pip install --user --upgrade pip
 
 # set up python packages
+python -m pip install altair
 python -m pip install grip
+python -m pip install numpy
+python -m pip install pandas
+python -m pip install scikit-learn
 
 # requires running the following in the command palette for VS Code command line
 # `>Shell Command: Install 'code' command in PATH` in VS Code
