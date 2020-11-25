@@ -6,6 +6,11 @@
 # a running list of packages and tools essential for bioinformatics development
 # (with a strong bent toward microbiology) with references
 
+# make ~/bin directory + add to path
+mkdir ~/bin
+echo -e 'export PATH="~/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
+
 # install xcode
 xcode-select --install
 
@@ -13,57 +18,93 @@ xcode-select --install
 # https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# install sane build environment for macOS
+# install development tools for macOS
+brew install docker
+brew install graphviz
+brew install git
 brew install openssl
+brew install pigz
 brew install readline
 brew install sqlite3
 brew install xz
 brew install zlib
 
-# install some useful tools
-brew install docker
-brew install graphviz
-brew install git
-brew install shellcheck
-brew install pigz
+# install scripting languages and their associated tools
 brew install pyenv
 brew install pyenv-virtualenv
 brew install pylint
 brew install r
-
-# install apps
-brew cask install docker
-brew cask install ferdi
-brew cask install google-cloud-sdk
-brew cask install visual-studio-code
-brew cask install rstudio
-brew cask install transmit
-
-# configure google-cloud-sdk
-echo -e 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"\nsource "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"' >> ~/.bash_profile
-echo -e 'export GOOGLE_APPLICATION_CREDENTIALS=~/western-arch-294518-4d8067e76648.json'  >> ~/.bash_profile
-source ~/.bash_profile
-
-# install bioinformatics packages
-brew install brewsci/bio/FORMULA
-brew install fastqc
-brew install spades
+brew install shellcheck
 
 # install java
 brew tap adoptopenjdk/openjdk
 brew cask install adoptopenjdk8
 
-# make ~/bin directory + add to path
-mkdir ~/bin
-echo -e 'export PATH="~/bin:$PATH"' >> ~/.bash_profile
+# install bioinformatics packages
+brew tap brewsci/bio
+brew install bandage
+brew install bbtools
+brew install blast@2.2
+brwe install busco
+brew install bwa-mem2
+brew install clustal-omega
+brew install clustal-w
+brew install cutadapt
+brew install fastp
+brew install fastqc
+brew install fastree
+brew install flye
+brew install freebayes
+brew install gatk
+brew install hisat2
+brew install igv
+brew install ivar
+brew install kaiju
+brew install kraken2
+brew install mash
+brew install masurca
+brew install miniasm
+brew install minimap2
+brew install mrbayes
+brew install muscle
+brew install nanofilt
+brew install nanopolish
+brew install pilon
+brew install porechop
+brew install prokka
+brew install quast
+brew install raxml
+brew install salmon
+brew install shovill
+brew install snpeff
+brew install spades
+brew install trimmomatic
+brew install trinity
+brew install unicycler
+brew install velvet
+
+# install + configure google cloud sdk
+brew cask install google-cloud-sdk
+echo -e 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"\nsource "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"' >> ~/.bash_profile
+echo -e 'export GOOGLE_APPLICATION_CREDENTIALS=~/western-arch-294518-4d8067e76648.json'  >> ~/.bash_profile
 source ~/.bash_profile
 
-# install nextflow
-curl -fsSL get.nextflow.io | bash
-mv ./nextflow ~/bin/nextflow
+# install + configure nextflow
+brew install nextflow
 echo -e 'export NXF_VER=20.10.0' >> ~/.bash_profile
 echo -e 'export NXF_MODE=google' >> ~/.bash_profile
 echo -e 'export TOWER_ACCESS_TOKEN=<insert token here>' >> ~/.bash_profile
+
+# install essential apps
+brew cask install docker
+brew cask install google-backup-and-sync
+brew cask install visual-studio-code
+brew cask install rstudio
+brew cask install transmit
+
+# install convenience apps
+brew cask install ferdi
+brew cask install michaelvillar-timer #https://github.com/michaelvillar/timer-app
 
 # configure python using pyenv + pyenv-virtualenv
 # https://stackoverflow.com/questions/41573587 for virtues of pyenv/virtualenv
