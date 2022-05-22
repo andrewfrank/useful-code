@@ -22,6 +22,8 @@ xcode-select --install
 brew install docker
 brew install graphviz
 brew install git
+brew install gh
+
 brew install openssl
 brew install pigz
 brew install readline
